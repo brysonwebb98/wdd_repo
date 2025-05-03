@@ -283,3 +283,79 @@ a:hover {
 }
 
 
+/* INTRO SECTION */
+.intro {
+  text-align: center;
+  margin: 20px;
+  font-weight: normal;
+}
+
+.info {
+  padding: 10px;
+}
+
+.info img {
+  max-width: 100%;
+  height: auto;
+}
+
+.media-card a {
+  text-decoration: none;
+  color: black;
+}
+
+#park-footer {
+  background-image: url("../images/topo_pattern.png");
+}
+
+#park-footer > * { 
+  margin: 20px;
+  padding: 10px;
+}
+
+/* BIGGER SCREEN BELOW */
+@media screen and (min-width: 630px) {
+
+.intro {
+  text-align: left;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.info img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  padding: 10px;
+}
+
+
+
+
+.media-card a {
+  text-decoration: none;
+  color: black;
+}
+
+
+#park-footer {
+  background-image: url("../images/topo_pattern.png");
+}
+
+#park-footer > * { 
+  margin: 20px;
+  padding: 10px;
+}
+
+
+#park-footer {
+  background-image: url("../images/topo_pattern.png");
+}
+
+}

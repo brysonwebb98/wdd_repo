@@ -1,35 +1,24 @@
-import { getParkData } from "./parkService.mjs";
-
-// FIRST SECTION W/LINK
+import { getParkData, parkInfoLinks } from "./parkService.mjs";
+import setHeaderFooter from "./setHeaderFooter.mjs";
+import { mediaCardTemplate } from "./templates.mjs";
 const parkData = getParkData();
-const disclaimer = document.querySelector(".disclaimer > a");
-disclaimer.href = parkData.url;
-disclaimer.innerHTML = parkData.fullName;
 
-// TITLE
-document.title = parkData.fullName;
+function setParkIntro(data) {
+    const introEl = document.querySelector(".intro");
+    introEl.innerHTML = `<h1>${parkData.fullName}</h1>
+    <p>${parkData.description}</p>`;
+}
 
-// FIRST IMAGE
-const heroImage = document.querySelector(".hero-banner img");
-heroImage.src = parkData.images[0].url;
+function setParkInfoLinks(data) {
+    // GRABBING THE INFORMATION SECTION
+    const infoSection = document.querySelector(".info");
+    // GETTING THE HTML FROM THE PARK INFO LINKS
+    const htmlStrings = data.map(mediaCardTemplate);
+    // PUTTING THE NEW ARRAY INTO THE HTML
+    infoSection.insertAdjacentHTML("afterbegin", htmlStrings.join(""));
+}
 
-// UPDATING THE NAME, DESIGNATION, STATES
-const parkName = document.querySelector(".hero-title")
-parkName.innerHTML = parkData.name;
-
-const designation = document.querySelector(".designation")
-designation.innerHTML = parkData.designation;
-
-const states = document.querySelector(".states")
-states.innerHTML = parkData.states;
-
-// DIDNT USE
-// function parkInfoTemplate(info) {
-//     return `<a href="/" class="hero-title">${info.name}</a>
-//     <p class="hero-banner-words">
-//         <span>${info.designation}</span>
-//         <span>${info.states}</span>
-//     </p>`;
-// }
-
+setHeaderFooter(parkData);
+setParkIntro(parkData);
+setParkInfoLinks(parkInfoLinks);
 
