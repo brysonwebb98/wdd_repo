@@ -1,0 +1,134 @@
+
+/* INTRO SECTION */
+.intro {
+text-align: center;
+margin: 20px;
+font-weight: normal;
+}
+
+.info {
+padding: 10px;
+}
+
+.info img {
+max-width: 100%;
+height: auto;
+}
+
+.media-card a {
+text-decoration: none;
+color: black;
+}
+
+#park-footer {
+background-image: url("../images/topo_pattern.png");
+}
+
+#park-footer > * { 
+margin: 20px;
+padding: 10px;
+}
+
+/* BIGGER SCREEN BELOW */
+@media screen and (min-width: 630px) {
+
+.intro {
+text-align: left;
+}
+
+.info {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: stretch;
+}
+
+.info img {
+width: 400px;
+height: 200px;
+object-fit: cover;
+display: block;
+padding: 10px;
+}
+
+.media-card a {
+text-decoration: none;
+color: black;
+}
+
+
+#park-footer {
+background-image: url("../images/topo_pattern.png");
+}
+
+#park-footer > * { 
+margin: 20px;
+padding: 10px;
+}
+
+
+#park-footer {
+background-image: url("../images/topo_pattern.png");
+}
+
+}
+
+
+
+
+img {
+max-width: 100%;
+}
+
+body {
+font-family: var(--bs-body-font-family);
+font-size: 18px;
+margin: 0;
+}
+
+a:link,
+a:visited {
+color: var(--bs-link-color);
+}
+
+a:hover {
+color: var(--bs-link-hover-color);
+}
+
+/* Skip links styling */
+.skip-links ul {
+list-style-type: none;
+margin: 0;
+padding-left: 0;
+}
+
+.skip-links a {
+font-size: 11px;
+font-size: 0.6875rem;
+position: absolute;
+right: 20px;
+top: -200px;
+z-index: -1;
+}
+
+.skip-links a:focus {
+top: 2px;
+z-index: 9999;
+}
+
+
+/* Utility styles */
+
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+
